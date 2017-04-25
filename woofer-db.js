@@ -27,7 +27,7 @@ function readWoofsInDatabase () {
   })
 
   // changed woof
-  firebase.databse().ref('woofs').on('child_changed', function (updateJokeSnapshot) {
+  firebase.database().ref('woofs').on('child_changed', function (updateJokeSnapshot) {
     updateWoofRow(updateJokeSnapshot.key, updateJokeSnapshot.val())
   })
 
